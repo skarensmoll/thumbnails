@@ -24,6 +24,7 @@ export async function HEAD(request: Request) {
 
 
 export async function POST(request: Request) {
+
   const topic = (await request.json())['topic']
   if (!topic) return new Response('Invalid input', {status: 400})
 
