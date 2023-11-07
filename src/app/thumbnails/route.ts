@@ -14,6 +14,13 @@ export async function GET(request: Request) {
   });
 }
 
+export async function HEAD(request: Request) {
+  return new Response('ok', {
+    status: 200,
+  });
+}
+
+
 export async function POST(request: Request) {
   const topic = (await request.json())['topic']
   if (!topic) return new Response('Invalid input', {status: 400})
