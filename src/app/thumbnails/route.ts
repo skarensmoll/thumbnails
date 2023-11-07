@@ -30,7 +30,7 @@ export async function POST(request: Request) {
 
   const response = await openai.images.generate({
     model: "dall-e-3",
-    prompt: `A bright illustration of '${topic}' without any text with smooth edges using this color pallete: #faf6ee, #ffffff, rgb(253, 127, 127), #746bd3, #d6ccff. Do not generate colors in circles.This image will be used as a thumbnail of 250x250 so not many details should be included as those cannot be seen from far. Include a max of 50 items`,
+    prompt: `A bright illustration of '${topic}' without any text with smooth edges using this color pallete: #faf6ee, #ffffff, rgb(253, 127, 127), #746bd3, #d6ccff. Do not generate colors in circles.This image will be used as a thumbnail of 250x250 so not many details should be included as those cannot be seen from far, use a max of 50 items.`,
     n: 1,
     size: "1024x1024",
   });
